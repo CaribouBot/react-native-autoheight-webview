@@ -154,6 +154,7 @@ export default class AutoHeightWebView extends PureComponent {
             }, style]}>
                 <WebView
                     {...this.props}
+                    originWhitelist={['*']}
                     onError={onError}
                     onLoad={onLoad}
                     onLoadStart={onLoadStart}
