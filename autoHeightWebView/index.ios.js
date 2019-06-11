@@ -118,7 +118,7 @@ export default class AutoHeightWebView extends PureComponent {
 
     onMessage(e) {
       if (this.props.onMessage) {
-        const messageObj = JSON.parse(e.nativeEvent.data);
+        const messageObj = JSON.parse(decodeURIComponent(decodeURIComponent(e.nativeEvent.data)));
         this.props.onMessage(messageObj);
       }
     }
